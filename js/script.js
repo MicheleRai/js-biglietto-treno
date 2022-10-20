@@ -7,14 +7,17 @@
 // Questo richiederà un minimo di ricerca.
 
 const age = parseInt(prompt('Inserire eta del passeggero'));
-console.log('eta del passeggero:' + age);
+document.getElementById('age').innerHTML = age;
+console.log('Eta del passeggero:' + age);
 
 const km = parseFloat(prompt('Inserire distanza da percorrere per raggiungere la meta del passeggero'));
-console.log('kilometri da percorrere:' + km);
+document.getElementById('km').innerHTML = km;
+console.log('Kilometri da percorrere:' + km);
 
 var prezzo = km * 0.24;
 var prezzo = prezzo.toFixed(2);
-console.log('prezzo senza sconti:' + prezzo);
+document.getElementById('no-sconto').innerHTML = prezzo;
+console.log('Prezzo senza sconti:' + prezzo);
 
 if (age < 18 ){
     var prezzo = prezzo - (prezzo * 0.2 )
@@ -22,4 +25,5 @@ if (age < 18 ){
     var prezzo = prezzo - (prezzo * 0.4 )
     }
  var prezzo = prezzo.toFixed(2);
-console.log('prezzo con sconti (se presenti)' + prezzo)
+ document.getElementById('scontato').innerHTML = prezzo;
+console.log('Prezzo con sconti (se presenti):' + prezzo)
