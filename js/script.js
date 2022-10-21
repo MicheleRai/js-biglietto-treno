@@ -16,14 +16,20 @@ console.log('Kilometri da percorrere:' + km);
 
 var prezzo = km * 0.24;
 var prezzo = prezzo.toFixed(2);
-document.getElementById('no-sconto').innerHTML = prezzo;
 console.log('Prezzo senza sconti:' + prezzo);
 
 if (age < 18 ){
     var prezzo = prezzo - (prezzo * 0.2 )
+    var prezzo = prezzo.toFixed(2);
+    document.getElementById('scontato').innerHTML = 'Data l eta inferiore a 18 il prezzo è' + prezzo;
+
 }else if (age > 65){
     var prezzo = prezzo - (prezzo * 0.4 )
+    var prezzo = prezzo.toFixed(2);
+    document.getElementById('scontato').innerHTML = 'Data l eta superoiorea 65 il prezzo è' + prezzo;
+
+    }else{
+        document.getElementById('scontato').innerHTML = prezzo;
     }
- var prezzo = prezzo.toFixed(2);
- document.getElementById('scontato').innerHTML = prezzo;
+ 
 console.log('Prezzo con sconti (se presenti):' + prezzo)
